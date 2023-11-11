@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 udisksctl unmount -b /dev/sda1
 echo "turning off container"
 docker stop jellyfin
