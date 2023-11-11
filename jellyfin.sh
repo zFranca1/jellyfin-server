@@ -16,4 +16,4 @@ docker-compose up -d
 
 docker ps
 
-echo "server is on... good movie"
+echo "server is on..."
