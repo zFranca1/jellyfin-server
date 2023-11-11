@@ -1,0 +1,21 @@
+version: "3.3"
+
+services:
+
+  jellyfin:
+    image: linuxserver/jellyfin
+    container_name: jellyfin
+    restart: unless-stopped 
+    ports:
+      - "8096:8096"
+#     - "8920:8920" #optional      
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Madrid
+#     - UMASK_SET=022 #optional  
+    volumes:
+      - /home/franca/jellyfin/config:/config
+      - /run/media/franca1/HD 1TB/Filmes e Series/Series:/data/tvshows  
+      - /run/media/franca1/HD 1TB/Filmes e Series/Filmes:/data/movies   
+      - /run/media/franca1/HD 1TB/Music:/data/music
